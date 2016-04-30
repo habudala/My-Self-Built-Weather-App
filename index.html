@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather App 2.0</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- adding my css after the bootstrap reset -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row-1">
+			<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 text-center">
+				<h1>Let Us Help You Find the Weather Wherever You May Be!</h1>
+			</div>
+			<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 text-center">
+				
+				<form id="myForm" onsubmit="return form();">
+				<input type="text" placeholder="search by City or Zip.." id="input" />
+					<select size="1" id="selected" >
+					
+						<option>AL</option> <option>AK</option> <option>AZ</option> <option>AR</option>
+						<option>CA</option> <option>CO</option> <option>CT</option> <option>DE</option>
+						<option>FL</option> <option>GA</option> <option>HI</option> <option>ID</option>
+						<option>IL</option> <option>IN</option> <option>IA</option> <option>KS</option>
+						<option>KY</option> <option>LA</option> <option>ME</option> <option>MD</option>
+						<option>MA</option> <option>MI</option> <option>MN</option> <option>MS</option>
+						<option>MO</option> <option>MT</option> <option>NE</option> <option>NV</option>
+						<option>NH</option> <option>NJ</option> <option>NM</option> <option>NY</option>
+						<option>NC</option> <option>ND</option> <option>OH</option> <option>OK</option>
+						<option>OR</option> <option>PA</option> <option>RI</option> <option>SC</option>
+						<option>SD</option> <option>TN</option> <option>TX</option> <option>UT</option>
+						<option>VT</option> <option>VA</option> <option>WA</option> <option>WV</option>
+						<option>WI</option> <option>WY</option>
+						
+					</select>
+				
+				<input type="submit" value="find" id="button"/>
+				</form>
+			</div>
+			
+		</div>
+		<div class="row-2">
+			<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 text-center" id="represent">
+			</div>
+		</div>
+		<div id="experiment">
+		</div>
+	</div>
+<!-- addig Jquery before bootstrap js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- Adding my own script tag -->
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
