@@ -16,17 +16,24 @@ h1 {font-family:tahoma;
 			border-top:3px solid white;
 			border-bottom:3px solid white;
 			border-radius: 50%;*/
-			
+
 }
 
 #input {padding:7px;
 		border-radius:7px;
 	}
 
-.newClass {height: 400px;
+.newClass {height: 200px;
 			margin-top:25px;
 		   background-color: rgba(13,100,150,0.5);
 		   color:white;
 		   font-size:20px;
+		   font-weight: bold;}
+
+.newClassFore {height: 200px;
+			margin-top:25px;
+		   background-color: rgba(13,100,150,0.5);
+		   color:white;
+		   font-size:15px;
 		   font-weight: bold;}
 

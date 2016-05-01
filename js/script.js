@@ -52,7 +52,32 @@ function form (e){
 			 container.addClass("newClass");
 			
 			container.html(targetLoc + "<br/>" + "<img src='" +targetIcon +"'/><br/>" + iconDesc + "<br/>" +
-			currTempCel + "&#8451;<br/>" + currTempFar + "&#8457;")
+			currTempCel + "&#8451;<br/>" + currTempFar + "&#8457;");
+
+			for(i = 0; i < data.forecast.simpleforecast.forecastday.length; i++) {
+				currDay = data.forecast.simpleforecast.forecastday[i];
+
+				 month = currDay.date.monthname;
+				 date = currDay.date.day;
+				 weekDay = currDay.date.weekday;
+
+				 foreIconDesc = currDay.conditions;
+				 foreIconUrl = currDay.icon_url;
+
+				 highTempCel = currDay.high.celsius;
+				 highTempFar = currDay.high.fahrenheit;
+
+				 lowTempCel = currDay.low.celsius;
+				 lowTempFar = currDay.low.fahrenheit;
+				 // console.log(document.getElementById("day" + (i+1)));
+
+
+				document.getElementById("day" + (i+1)).innerHTML = month +" " + date + "<br/>" + weekDay + "<br/><img src='" + foreIconUrl + "' /><br/>" +
+					foreIconDesc +"<br/><br/> High: " + highTempCel + "&#8451;" + " / " + "High: " + highTempFar + "&#8457; <br/>" +
+					"Low: " + lowTempCel + "&#8451;" + " / " + lowTempFar + "&#8457;";
+				
+				$("#day" + (i+1)).addClass("newClassFore");
+			}
 			
 		}).fail(function(){	   // IF I DATA RETRIEVAL FAILS, THEN...
 			console.log("Sorry, couldn't load data");
