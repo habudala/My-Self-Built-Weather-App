@@ -10,14 +10,23 @@ h1 {font-family:tahoma;
 	color:white;
 	text-shadow: 6px 6px 6px black;}
 
-#experiment {width:35px;
+/*#experiment {width:35px;
 			height:35px;
 			border-left:3px solid white;
 			border-top:3px solid white;
 			border-bottom:3px solid white;
-			border-radius: 50%;
+			border-radius: 50%;*/
+			
 }
 
 #input {padding:7px;
 		border-radius:7px;
 	}
+
+.newClass {height: 400px;
+			margin-top:25px;
+		   background-color: rgba(13,100,150,0.5);
+		   color:white;
+		   font-size:20px;
+		   font-weight: bold;}
+
