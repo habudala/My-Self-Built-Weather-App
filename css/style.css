@@ -2,11 +2,15 @@
 body {margin:0;
 	padding:0;
 	background-image: url("../images/bg2.jpg");
-	-webkit-background-size: cover;
-	background-repeat: no-repeat;}
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height:100vh;
+	}
 
-h1 {font-family:tahoma;
+h1 {font-family:times;
 	font-size: 3em;
+	font-weight:bold;
 	color:white;
 	text-shadow: 6px 6px 6px black;}
 
@@ -30,10 +34,26 @@ h1 {font-family:tahoma;
 		   font-size:20px;
 		   font-weight: bold;}
 
-.newClassFore {height: 200px;
+.newClassFore {height: 240px;
 			margin-top:25px;
 		   background-color: rgba(13,100,150,0.5);
+		   box-sizing: border-box;
 		   color:white;
 		   font-size:15px;
-		   font-weight: bold;}
+		   font-weight: bold;
+		   }
+
+#day1,#day2,#day3 {border-right:4px solid rgba(1,1,1,0.1);}
+
+@media only screen and (min-width:992px) and (max-width:1200px) {
+	.newClassFore {height:280px;}
+}
+
+@media only screen and (max-width:991px) {
+
+	.newClassFore {border:3px solid rgba(1,1,1,0.1);} 
+
+}
+
+
 

@@ -3,14 +3,12 @@ var apiKey = "004ee43afc5c6206";
 var input;
 var fullURL;
 var state;
-var city;
 var mySubmit = document.getElementById("button");
 mySubmit.addEventListener("click", form, false);
 
 function form (e){
 
 	e.preventDefault();
-
 /////////////////////////////CLIENT INPUT STRING MANIPULATION///////////////////////////////////////
 	input = document.getElementById("input").value;
 	input = input.trim();
@@ -45,7 +43,7 @@ function form (e){
 			 console.log(data);
 			 targetLoc = data.current_observation.display_location.full;
 			 targetIcon = data.current_observation.icon_url;
-			 iconDesc = data.current_observation.icon;
+			 iconDesc = data.current_observation.weather;
 			 currTempCel = data.current_observation.temp_c;
 			 currTempFar = data.current_observation.temp_f;
 			 container = $("#represent");
@@ -53,6 +51,8 @@ function form (e){
 			
 			container.html(targetLoc + "<br/>" + "<img src='" +targetIcon +"'/><br/>" + iconDesc + "<br/>" +
 			currTempCel + "&#8451;<br/>" + currTempFar + "&#8457;");
+
+//////////////////////////RETRIEVING FORECAST DATA AND GENERATING HTML DYNAMICALLY//////////////////////////////////
 
 			for(i = 0; i < data.forecast.simpleforecast.forecastday.length; i++) {
 				currDay = data.forecast.simpleforecast.forecastday[i];
@@ -71,10 +71,9 @@ function form (e){
 				 lowTempFar = currDay.low.fahrenheit;
 				 // console.log(document.getElementById("day" + (i+1)));
 
-
-				document.getElementById("day" + (i+1)).innerHTML = month +" " + date + "<br/>" + weekDay + "<br/><img src='" + foreIconUrl + "' /><br/>" +
+				$("#day" + (i+1)).html( month +" " + date + "<br/>" + weekDay + "<br/><img src='" + foreIconUrl + "' /><br/>" +
 					foreIconDesc +"<br/><br/> High: " + highTempCel + "&#8451;" + " / " + "High: " + highTempFar + "&#8457; <br/>" +
-					"Low: " + lowTempCel + "&#8451;" + " / " + lowTempFar + "&#8457;";
+					"Low: " + lowTempCel + "&#8451;" + " / " + lowTempFar + "&#8457;" );
 				
 				$("#day" + (i+1)).addClass("newClassFore");
 			}
