@@ -9,3 +9,5 @@
 ##### - Parsing through data & retrieving specific information
 ##### - Displaying retrieved information.
 ##### - Retrieve major cities's current forecast, and display on the starting page.
+##### - Also, add enable website for international search as well.
+
