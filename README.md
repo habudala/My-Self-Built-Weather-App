@@ -8,3 +8,4 @@
 ##### - String manipulation (to translate user's input into the formatted query)
 ##### - Parsing through data & retrieving specific information
 ##### - Displaying retrieved information.
+##### - Retrieve major cities's current forecast, and display on the starting page.
